@@ -15,6 +15,8 @@ public class Main {
         System.out.println(transmission);
         Wheel wheel = context.getBean("wheel", Wheel.class);
         System.out.println(wheel);
+        Box box = context.getBean("box", Box.class);
+        System.out.println(box);
 
     }
 }

@@ -17,5 +17,7 @@
           class="org.example.Transmission"/>
     <bean id="wheel"
           class="org.example.Wheel"/>
+    <bean id="box"
+          class="org.example.Box"/>
 
 </beans>

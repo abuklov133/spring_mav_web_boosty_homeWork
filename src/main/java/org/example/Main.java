@@ -8,7 +8,8 @@ public class Main {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         Car car = context.getBean("car", Car.class);
         Car car1 = context.getBean("car", Car.class);
-        System.out.println(car == car1);
+        System.out.println(car.getEngine() == car1.getEngine());
+        System.out.println(car.getWheel() == car1.getWheel());
 
 
     }

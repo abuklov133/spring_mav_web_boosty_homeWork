@@ -9,7 +9,7 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="engine"
-          class="org.example.Engine">
+          class="org.example.Engine" scope="prototype">
         <property name="mark" value="${engine.mark}"/>
         <property name="cylindersCount" value="${engine.cylinderCount}"/>
         <property name="power" value="${engine.power}"/>
@@ -18,7 +18,7 @@
         <constructor-arg name="maxTransmission" value="${transmission.maxTransmission}"/>
         <constructor-arg name="mark" value="${transmission.mark}"/>
     </bean>
-    <bean id="wheel" class="org.example.Wheel">
+    <bean id="wheel" class="org.example.Wheel" scope="prototype">
         <constructor-arg name="count" value="${wheel.count}"/>
     </bean>
     <bean id="car"

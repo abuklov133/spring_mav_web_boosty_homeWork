@@ -8,15 +8,8 @@ public class Main {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         Car car = context.getBean("car", Car.class);
         System.out.println(car);
-        Engine engine = context.getBean("engine", Engine.class);
-        System.out.println(engine);
-        Transmission transmission =
-                context.getBean("transmission", Transmission.class);
-        System.out.println(transmission);
-        Wheel wheel = context.getBean("wheel", Wheel.class);
-        System.out.println(wheel);
-        Box box = context.getBean("box", Box.class);
-        System.out.println(box);
+
+
 
     }
 }

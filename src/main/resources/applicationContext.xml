@@ -10,23 +10,23 @@
 
     <bean id="engine"
           class="org.example.Engine">
-        <property name="mark" value="vaz"/>
-        <property name="cylindersCount" value="4"/>
-        <property name="power" value="100"/>
+        <property name="mark" value="${engine.mark:vaz}"/>
+        <property name="cylindersCount" value="${engine.cylinderCount:6}"/>
+        <property name="power" value="${engine.power:100}"/>
     </bean>
     <bean id="transmission" class="org.example.Transmission">
-        <constructor-arg name="maxTransmission" value="5"/>
-        <constructor-arg name="mark" value="vaz_T"/>
+        <constructor-arg name="maxTransmission" value="${transmission.maxTransmission:6}"/>
+        <constructor-arg name="mark" value="${transmission.mark:vazT}"/>
     </bean>
     <bean id="wheel" class="org.example.Wheel">
-        <constructor-arg name="count" value="4"/>
+        <constructor-arg name="count" value="${wheel.count:4}"/>
     </bean>
     <bean id="car"
           class="org.example.Car">
         <property name="engine" ref="engine"/>
         <property name="transmission" ref="transmission"/>
         <property name="wheel" ref="wheel"/>
-        <property name="mark" value="antilopa_gnu"/>
+        <property name="mark" value="${car.mark:vazR}"/>
     </bean>
 
 </beans>
